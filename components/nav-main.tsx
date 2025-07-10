@@ -1,4 +1,4 @@
-"use client"
+
 
 import { IconCirclePlusFilled, IconMail, type Icon } from "@tabler/icons-react"
 

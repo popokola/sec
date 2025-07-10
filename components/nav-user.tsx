@@ -29,6 +29,10 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
+import { LogoutButton } from "./logout"
+import Link from "next/link"
+
+
 export function NavUser({
   user,
 }: {
@@ -86,8 +90,9 @@ export function NavUser({
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <IconUserCircle />
-                Account
+                <Link href="/dashboard/profile">Account</Link>
               </DropdownMenuItem>
+              
               <DropdownMenuItem>
                 <IconCreditCard />
                 Billing
@@ -100,7 +105,9 @@ export function NavUser({
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <IconLogout />
-              Log out
+              <LogoutButton className="w-full justify-start">
+                Logout
+              </LogoutButton>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
